@@ -1,0 +1,242 @@
+@import "normalize.less";
+@import "mixins/index.less";
+
+html, body {
+    height: 100%;
+    border: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    //background: @bodyBackgroundColor;
+    overflow: hidden;
+    //color: @fontColor;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //  remove tap highlight color for mobile safari
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+// Reset fonts for relevant elements
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+input, select, textarea {
+    //border: 1px solid @borderColor;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: 0;
+}
+
+// Links
+a {
+    //color: @linkColor;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        //color: @linkHoverColor;
+    }
+
+    &:active {
+        //color: @linkActiveColor;
+    }
+
+    &:active,
+    &:hover {
+        outline: 0;
+        text-decoration: none;
+    }
+
+    &[disabled] {
+        color: #ccc;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+::selection {
+    color: #fff;
+    background: #03a9f4;
+}
+
+.clearfix {
+    .clearfix();
+}
+
+.ellipsis {
+    .ellipsis();
+}
+
+em {
+    //color: @fontColor-1;
+    font-style: inherit;
+}
+
+.no-data, .error-msg {
+    margin-top: 100px;
+    text-align: center;
+    //color: @fontColor;
+}
+
+.ef-date-picker.el-date-editor--date.el-date-editor.el-input {
+    width: 140px;
+}
+
+.ef-date-popper {
+
+    .el-date-table td {
+        width: 25px;
+        height: 25px;
+    }
+
+    &.el-date-picker.has-time {
+        min-width: 254px;
+    }
+}
+
+.ef-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body {
+    .el-date-range-picker.has-time {
+        min-width: 450px;
+        .el-picker-panel__body {
+            min-width: 450px;
+        }
+        .el-date-range-picker__content {
+            padding: 10px;
+            min-width: 0;
+            .el-date-table {
+                min-width: 0;
+                td {
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .el-date-picker.has-time {
+        min-width: 210px;
+        .el-picker-panel__content {
+            min-width: 0;
+            margin: 5px;
+            .el-date-table {
+                min-width: 0;
+                td {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+// 图标颜色配置
+a {
+    &.active {
+        .iconfont {
+            //color: @iconFontActiveColor;
+        }
+    }
+
+    .iconfont {
+        //color: @iconFontColor;
+
+        &:hover {
+            //color: @iconFontHoverColor;
+        }
+    }
+}
+
+// atwho样式
+.atwho-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin-top: 18px;
+    //background: @primaryColor-1;
+    //border: 1px solid @borderColor;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    z-index: 500;
+    font-size: 14px;
+}
+
+.atwho-view .cur {
+    //background: @linkColor;
+    //color: @primaryColor-1;
+}
+
+.atwho-view .cur small {
+    //color: @primaryColor-1;
+}
+
+.atwho-view strong {
+    //color: @linkColor;
+}
+
+.atwho-view .cur strong {
+    //color: @primaryColor-1;
+    font: bold;
+}
+
+.atwho-view ul {
+    /* width: 100px; */
+    list-style: none;
+    padding: 0;
+    margin: auto;
+}
+
+.atwho-view ul li {
+    display: block;
+    padding: 5px 10px;
+    //border-bottom: 1px solid @borderColor;
+    cursor: pointer;
+    /* border-top: 1px solid #C8C8C8; */
+}
+
+.atwho-view small {
+    font-size: smaller;
+    //color: @fontColor;
+    font-weight: normal;
+}
+
+.loading {
+    background-image: url("../images/loading_24x24.gif") !important;
+    background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    &:before {
+        opacity: 0 !important;
+    }
+}

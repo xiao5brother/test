@@ -1,0 +1,30 @@
+.clearfix() {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+    }
+}
+
+.ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bg-image(@url) {
+    background: url('@{url}-x1.png') no-repeat center;
+    background-size: 100%;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        background: url('@{url}-x2.png') no-repeat center;
+        background-size: 100%;
+    }
+}
